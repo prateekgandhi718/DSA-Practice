@@ -20,7 +20,7 @@ void printArray (int * arr, int size) {
     printf("\n");
 }
 
-int partition (int * arr, int low, int high) {
+int partition (int * arr, int low, int high) { //int because it will return the position of the pivot after placing it
     int pivot = arr[low];
     int i = low+1;
     int j = high;
@@ -41,7 +41,7 @@ int partition (int * arr, int low, int high) {
             arr[i] = temp;
         }
     } while (i < j);
-    //finally swap arr[low] with arr[j]
+    //finally swap arr[low] with arr[j] when j crosses i.
     temp = arr[low];
     arr[low] = arr[j];
     arr[j] = temp;

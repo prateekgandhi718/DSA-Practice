@@ -25,11 +25,11 @@ void insertionSort (int * arr, int size) {
         key = arr[i];
         j = i-1;
         while (j>=0 && arr[j] > key) {
-            //we be slidin'
+            //we be slidin' the key
             arr[j+1] = arr[j];
             j--;
         }
-        arr[j+1] = key;
+        arr[j+1] = key; //finally inserting the key.
     }
 }
 
